@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-body, ul {
+body,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -13,11 +14,17 @@ body {
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
 }
 
 .gray-text {
@@ -92,16 +99,70 @@ header,
 }
 
 #header-menu ul {
-    display: flex;
+  display: flex;
 }
 
 #header-menu ul li a {
-    display: block;
-    padding: 15px 35px;
-    color: #ababab;
-    text-transform: uppercase;
+  display: block;
+  padding: 15px 35px;
+  color: #ababab;
+  text-transform: uppercase;
 }
 
 #header-menu ul li:first-child a {
-    padding-left: 0;
+  padding-left: 0;
+}
+
+#banners {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#banners > div {
+  width: 50%;
+}
+
+#banners > div img {
+  max-width: 100%;
+}
+
+#banners .bn-left .wrap {
+  margin-right: 15px;
+  border: 1px solid gray;
+}
+
+#banners .bn-right .wrap {
+  margin-left: 15px;
+}
+
+#banners .bn-right .img-block {
+  position: relative;
+}
+
+#banners .bn-right h3 {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: 2vw;
+  color: #fff;
+  font-weight: normal;
+  margin: 0;
+}
+
+#banners .bn-right p {
+  border-top: 1px solid #000;
+  margin-top: 5px;
+  padding-top: 15px;
+}
+
+#banners i {
+  color: #f2ac04;
+  font-size: 26px;
+}
+
+#banners .slide {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
 }
