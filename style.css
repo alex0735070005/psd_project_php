@@ -3,8 +3,7 @@
   box-sizing: border-box;
 }
 
-body,
-ul {
+body, ul {
   margin: 0;
   padding: 0;
 }
@@ -21,9 +20,7 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   text-transform: uppercase;
   font-weight: lighter;
 }
@@ -37,8 +34,7 @@ h3 {
   margin: auto;
 }
 
-header,
-#header-top {
+header, #header-top {
   display: flex;
   flex-wrap: wrap;
 }
@@ -69,12 +65,10 @@ header,
   justify-content: flex-end;
   padding-right: 35px;
   border-right: 1px solid #cac8c5;
+  height: 55px;
 }
 
-#logo::before,
-#logo::after, 
-#logo-footer::before,
-#logo-footer::after {
+#logo::before, #logo::after, #logo-footer::before, #logo-footer::after {
   content: "";
   height: 55px;
   width: 55px;
@@ -103,6 +97,7 @@ header,
 
 #header-menu ul {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #header-menu ul li a {
@@ -121,11 +116,11 @@ header,
   flex-wrap: wrap;
 }
 
-#banners > div {
+#banners>div {
   width: 50%;
 }
 
-#banners > div img {
+#banners>div img {
   max-width: 100%;
 }
 
@@ -173,45 +168,45 @@ header,
 }
 
 #content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 40px 0 0 0;
-    border-top: 1px solid gray;
-    padding: 30px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0 0 0;
+  border-top: 1px solid gray;
+  padding: 30px 0 0 0;
 }
 
 #content .item {
-    width: 33.33%;
+  width: 33.33%;
 }
 
 #content .item h2 {
-    margin: 0 0 30px 0;
+  margin: 0 0 30px 0;
 }
 
 #content .about, #content .contacts {
-    padding: 0 40px;
+  padding: 0 40px;
 }
 
 #content .about {
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;    
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
 }
 
 .news {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .news .block-news {
-    display: flex;
-    align-items: flex-start;
-    border-bottom: 1px dashed gray;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px dashed gray;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .news .block-news h4 {
-    margin: 0 0 5px 0
+  margin: 0 0 5px 0
 }
 
 .news .date-news span {
@@ -232,14 +227,14 @@ header,
   line-height: 24px;
 }
 
-.contacts > div {
+.contacts>div {
   border-bottom: 1px dashed gray;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
 }
 
-.contacts > div:last-child {
+.contacts>div:last-child {
   border: none;
 }
 
@@ -255,7 +250,7 @@ header,
   color: gray;
 }
 
-.contacts > div:first-of-type span,  .contacts > div:first-of-type + div span{
+.contacts>div:first-of-type span, .contacts>div:first-of-type+div span {
   font-weight: bold;
 }
 
@@ -297,4 +292,102 @@ footer ul li:last-child a {
 
 footer span {
   color: grey;
+}
+
+@media(max-width: 1030px) {
+  body {
+    padding: 15px;
+  }
+}
+
+@media(max-width: 725px) {
+  #logo {
+    border: none;
+  }
+  #header-text {
+    margin-top: 15px;
+    padding: 0;
+  }
+  #header-top {
+    padding: 0 0 15px 0;
+    justify-content: center;
+    text-align: center;
+  }
+  #header-text h4 {
+    margin-bottom: 15px;
+  }
+  #header-menu ul {
+    justify-content: center;
+  }
+  .title-products {
+    text-align: center;
+    margin: 5px 0;
+  }
+  #banners {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #banners .wrap {
+    margin: 5px 0 !important;
+  }
+  #banners .bn-right .img-block {
+    height: auto;
+  }
+  #banners>div {
+    width: 90%;
+  }
+  #banners .bn-right h3 {
+    width: 90%;
+    font-size: 4vw;
+  }
+  #header-menu ul li a {
+    padding: 5px 35px;
+  }
+  #content {
+    margin-top: 5px;
+    padding-top: 5px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #content .item {
+    width: 90%;
+  }
+
+  #content h2 {
+    margin: 10px !important;
+  }
+
+  #content .contacts {
+    margin-top: 15px;
+  }
+
+  footer ul {
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  footer {
+    margin-top: 5px;
+    padding: 10px 0;
+  }
+}
+
+@media(max-width: 420px) {
+  #header-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header-menu ul li a {
+    padding: 5px 0;
+  }
+
+  #content .contacts, #content .about {
+    padding: 0 15px;
+  }
+
+  
 }
